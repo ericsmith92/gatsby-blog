@@ -9,19 +9,19 @@ export default ({ data }) =>{
 console.log(data);
   return (
       <Layout>
-       <SEO title="Home" />
-        <div>
-          <h1>Eric's Thoughts</h1>
-          <h4>{ data.allMarkdownRemark.totalCount}</h4>
-        </div>
-        {
-          data.allMarkdownRemark.edges.map(({node}) => (
-            <div key={node.id}>
-              <span>{ node.frontmatter.title} - {node.frontmatter.date}</span>
-              <p>{node.excerpt}</p>
-            </div>  
-          ))
-        }
+        <SEO title="Home" />
+          <div>
+            <h1>Eric's Thoughts</h1>
+            <h4>{ data.allMarkdownRemark.totalCount}</h4>
+          </div>
+          {
+            data.allMarkdownRemark.edges.map(({node}) => (
+              <div key={node.id}>
+                <span>{ node.frontmatter.title} - {node.frontmatter.date}</span>
+                <p>{node.excerpt}</p>
+              </div>  
+            ))
+          }
       </Layout>
     )
 } 
