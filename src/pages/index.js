@@ -12,7 +12,7 @@ console.log(data);
         <SEO title="Home" />
           <div>
             <h1>Eric's Thoughts</h1>
-            <h4>{ data.allMarkdownRemark.totalCount}</h4>
+            <h4>{ data.allMarkdownRemark.totalCount }</h4>
           </div>
           {
             data.allMarkdownRemark.edges.map(({node}) => (
